@@ -1,0 +1,40 @@
+.sidebar {
+    background-color: #fff;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--blue-color);
+    color:white;
+    border-left:5px var(--blue-color) solid;
+}
+
+.sidebar-nav li a i {
+    margin-right: 10px;
+}
+
+.sidebar-title {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #333;
+}
