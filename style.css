@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+:root{
+    --blue-color: #328fe6;
+}
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #fff;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--blue-color);
+    color:white;
+    border-left:5px var(--blue-color) solid;
+}
+
+.sidebar-nav li a i {
+    margin-right: 10px;
+}
+
+.sidebar-title {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    
+    display: flex;
+    align-items: self-start;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 8px 12px;
+    border:1px solid rgb(194, 194, 194);
+margin-right: 350px;
+
+}
+
+.search-bar i {
+    margin-right: 8px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    width:300px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile i,
+.user-profile span,
+.user-profile img {
+    margin-right: 10px;
+}
+
+.user-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.page-title h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.contact-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 4%;
+}
+
+.contact-item img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+.contact-item figure {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+  padding: 0;
+    overflow: hidden;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contact-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.message-button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    border:1px solid black;
+}
+.message-button:hover {
+    background-color: #328fe6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#addC{
+    background-color: var(--blue-color);
+    color:white;
+    border:none;
+    border-radius: 10px;
+    padding-inline: 1%;
+    max-height: 40px;
+}
+
+.page-title,  .contact-list{
+    background-color: rgb(245, 245, 245);
+    margin: 0;
+    padding: 1%;
+}
+
+select{
+    padding:1%;
+    border:none;
+    margin-inline:10px;
+    font-size: medium;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.fas.fa-bell{
+    color: #328fe6;
+  
+    text-align: center;
+    align-items: center;
+    margin-right: 30px;
+}
+.a{
+    color: #328fe6;
+}
