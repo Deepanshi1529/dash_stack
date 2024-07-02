@@ -1,0 +1,88 @@
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 1rem;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+button {
+    background-color: #598cff;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #598cff;
+}
+
+.forget-password {
+    text-align: right;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+a {
+    color: #598cff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
