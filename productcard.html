@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+  
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discount-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #777;
+    margin: 10px 0;
+}
+
+.product-rating {
+    font-size: 0.9em;
+    color: #f39c12;
+    margin: 10px 0;
+}
+
+.product-rating span {
+    margin-right: 5px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+.product-price .original-price {
+    text-decoration: line-through;
+    color: #bdc3c7;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+    transform: scale(1.05);
+}
+</style>
+
+<body>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="image.jpg" alt="Product Image" >
+            <div class="discount-label">-20%</div>
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Product Name</h3>
+            <p class="product-description">This is a short description of the product. It highlights key features and benefits.</p>
+            <div class="product-rating">
+                <span>★★★★☆</span>
+                <span>(120 reviews)</span>
+            </div>
+            <div class="product-price">$79.99 <span class="original-price">$99.99</span></div>
+            <div class="product-buttons">
+                <button class="btn btn-primary">Add to Cart</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
