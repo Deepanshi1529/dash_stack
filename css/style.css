@@ -292,3 +292,12 @@ font-weight: bold;
     color: #FFFFFF;
 }
 
+.edit-button{
+    width: 126px;
+    height: 38px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+}
+
