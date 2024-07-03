@@ -1,0 +1,401 @@
+/* Classes 
+1. container 
+2.left-container
+3.right-container
+4.header-box
+5.content*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+body{
+    max-width: 100%;
+    height: 100%;
+     
+
+
+}
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.logo-name
+{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+
+}
+.first-part{
+    font-size: 20px;
+    color: #4880FF;
+
+}
+.second-part{
+    font-size: 20px;
+}
+
+
+
+.left-container{
+    width:240px ;
+    height: 1070px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+
+}
+.left-box{
+    width:240px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 70px;
+    gap: 20px;
+    border-bottom: 0.6px solid #c1c1c1;
+}
+.Dashboard-button{
+    display: flex;
+    align-self: start;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    border: none ;
+    background-color: white;
+    width: 192px;
+    height: 50px;
+    
+
+}
+.left-box2{
+    width: 240px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 70px;
+    gap: 20px;
+    border-bottom: 0.6px solid #c1c1c1;
+}
+
+.left-box3{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    /* margin-left: -25px; */
+    margin-left: 70px;
+}
+.Dashboard-button img{
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+}
+.Dashboard-name{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.1px;
+
+    color: #202224;
+}
+
+.Dashboard-button:focus{
+    background-color: #4880ff ;
+    border-radius:10px ;
+    
+}
+.Dashboard-button:focus .Dashboard-name 
+{
+    
+    color: white;
+}
+.Dashboard-button:focus img {
+    filter: brightness(0) invert(1); /* This makes the image white */
+}
+.heading{
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 16.37px;
+    color: #202224;
+    margin-left: 20px;
+
+}
+.right-container{
+    width: 1202px;
+    height: 1070px;
+    display: flex;
+    flex-direction: column;
+
+}
+.header-box{
+    width: 1201px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.search-option
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    align-items: center;
+    gap: 20px;
+    width: 800px;
+}
+.hamburger img{
+    width: 24px;
+    height: 25px;
+}
+#search{
+    width: 388px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #f5f6fa;
+}
+.profile-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+.notification-bar img{
+    width: 29px;
+    height: 30px;
+}
+.country-option{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+.country-image img{
+    width: 40px;
+    height: 27px;
+}
+ select{
+    background: transparent ;
+    outline: none;
+    width: 70px;
+    height: 19px;
+    border: none;
+}
+select:focus{
+    outline: none;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+.profile-image img{
+    width: 50px;
+    height: 52px;
+    border-radius: 50%;
+}
+.profile-name{
+    display: flex;
+    flex-direction: column;
+
+}
+.admin-name{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.1px;
+    color: #404040;
+}
+.admin{
+    font-size: 12px;
+    line-height: 16.37px;
+    font-weight: 600;
+    color: #565656;
+}
+button{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    
+}
+button img{
+    width: 10px;
+    height: 6px;
+    
+}
+.content{
+    width: 1202px;
+    height: 1070px;
+    background-color: rgb(238, 236, 236);
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 30px;
+}
+.content-heading{
+    font-size: 32px;
+    line-height: 43.65px;
+    letter-spacing: -0.11px;
+
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    /* background-color: white; */
+    padding: 5px;
+    border-radius: 10px;
+}
+.item1{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    width: 361px;
+    height: 497px;
+}
+
+
+.item-image img{
+    width: 361px;
+    height: 317px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.content-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    
+}
+.left-content-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+}
+.rating-star {
+    display: flex;
+    align-items: center;
+}
+
+.star-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 0 10px;
+    margin-left: -10px;
+    gap: 2px;
+}
+
+.star-icon input {
+    display: none;
+}
+
+.star-icon label {
+    font-size: 16px; /* Set font size to 16px */
+    width: 16px;     /* Set width to 16px */
+    height: 16px;    /* Set height to 16px */
+    cursor: pointer;
+    color: #ccc; /* Grey color for inactive stars */
+    position: relative;
+}
+
+.star-icon label:before {
+    content: '\f005'; /* FontAwesome star icon */
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;     /* Ensure the star icon itself is 16px */
+    height: 16px;    /* Ensure the star icon itself is 16px */
+}
+
+.star-icon input:checked ~ label:before,
+.star-icon input:checked ~ label ~ label:before {
+    color: #f5b301; /* Yellow color for active stars */
+}
+ 
+
+.star-icon label:hover:before,
+.star-icon label:hover ~ label:before {
+    color: #f5b301; /* Yellow color on hover */
+}
+
+.star-rating{
+    color: #575656;
+}
+
+.name-link{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #202224;
+
+}
+.watch-price{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+}
+.edit-button{
+    width: 126px;
+    height: 38px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+}
+.right-description img{
+    width: 44px;
+    height: 44px;
+}
+.wishlist-button {
+    width: 44px;
+    height: 44px;
+    background-color: #F9F9F9;
+    border: none;
+}
+
+.wishlist-button img {
+    width: 20px;
+    height: 16px;
+}
+
+.wishlist-button:focus img {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(76%) saturate(7448%) hue-rotate(338deg) brightness(101%) contrast(101%);
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard #4</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<!--     container class is for the whole container -->
+    <div class="container">
+<!--         left container container the side bar  -->
+        <div class="left-container">
+            <div class="logo-name">
+                <span class="first-part">Dash</span>
+                <span class="second-part">Stack</span>
+            </div>
+            <div class="left-box">
+                <button class="Dashboard-button">
+                    <img src="./images/dashboard.png" alt="">
+                    <span class="Dashboard-name">Dashboard</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Products.png" alt="">
+                    <span class="Dashboard-name">Products</span>
+                </button>
+                <button class="Dashboard-button"> 
+                    <img src="./images/favourites.png" alt="">
+                    <span class="Dashboard-name">Favourites</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/inbox.png" alt="">
+                    <span class="Dashboard-name">Inbox</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/orderlist.png" alt="">
+                    <span class="Dashboard-name">Order Lists</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Productstock.png" alt="">
+                    <span class="Dashboard-name">Product-Stock</span>
+                </button>
+            </div>
+            <div class="left-box2">
+                <span class="heading">PAGES</span>
+                <button class="Dashboard-button">
+                    <img src="./images/Pricing.png" alt="">
+                    <span class="Dashboard-name">Pricing</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Calender.png" alt="">
+                    <span class="Dashboard-name">Calender</span>
+                </button>
+                <button class="Dashboard-button"> 
+                    <img src="./images/To-Do.png" alt="">
+                    <span class="Dashboard-name">To-Do</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Contact.png" alt="">
+                    <span class="Dashboard-name">Contact</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Invoice.png" alt="">
+                    <span class="Dashboard-name">Invoice</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Ui Elements.png" alt="">
+                    <span class="Dashboard-name">UI Elements</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Team.png" alt="">
+                    <span class="Dashboard-name">Team</span>
+                </button>
+                <button class="Dashboard-button">
+                    <img src="./images/Table.png" alt="">
+                    <span class="Dashboard-name">Table</span>
+                </button>
+
+            </div>
+            <div class="left-box3">
+                <button class="Dashboard-button">
+                    <img src="./images/Setting.png" alt="">
+                    <span class="Dashboard-name">Settings</span>
+                </button>
+                <button class="Dashboard-button"> 
+                    <img src="./images/logout.png" alt="">
+                    <span class="Dashboard-name">Logout</span>
+                </button>
+            </div>
+
+        </div>
+<!-- right container contain the two thing header and content  -->
+        <div class="right-container">
+<!--             headbox contain the profile and search part  -->
+            <div class="header-box">
+                <div class="search-option">
+                    <div class="hamburger">
+                        <img src="./images/hamburder.png" alt="">
+                    </div>
+                    <div class="search">
+                        <form class="search-form">
+                            <input type="search" name="Search" id="search" placeholder="Search" >
+                        </form>
+                    </div>
+                </div>
+                <div class="profile-part">
+                    <div class="notification-bar">
+                        <img src="./images/notification.png" alt="">
+                    </div>
+                    <div class="country-option">
+                        <div class="country-image">
+                            <img src="./images/flag.png" alt="">
+                        </div>
+                        <div class="country-selection">
+                            <select name="country" id="country">
+                                <option value="english">English</option>
+                                <option value="hindi">Hindi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="profile-image">
+                            <img src="./images/Profile.png" alt="">
+                        </div>
+                        <div class="profile-name">
+                            <div class="admin-name">Moni Roy</div>
+                            <div class="admin">Admin</div>
+                        </div>
+                    </div>
+                    <button>
+                        <img src="./images/arrow1.png" alt="">
+                    </button>
+                </div>
+            </div>
+<!--             content class is for the whole content in the page  -->
+            <div class="content">
+                <span class="content-heading">Favourites</span>
+                <div class="content-grid">
+                    <div class="item1">
+                        
+                        
+                        
+                        <div class="item-image">
+                            <img src="./images/clock.png" alt="">
+                            
+                        </div>
+                        <div class="content-description">
+                            <div class="left-content-description">
+                                <p class="name-watch"><a href="" class="name-link">Apple Watch Series 4</a></p>
+                                <p><a href="" class="watch-price">$120.00</a></p>
+                                <div class="rating-star">
+                                    <div class="star-icon">
+                                        <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                                    </div>
+                                    <span>(132)</span>
+                                </div> 
+                                <button class="edit-button">
+                                    Edit Product
+                                </button>
+                            </div>
+                            <div class="right-description">
+                                <button class="wishlist-button">
+                                    <img src="./images/heart.png" alt="" tabindex="0">
+                                </button>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="item1">
+                        <div class="item-image">
+                            <img src="./images/clock.png" alt="">
+                        </div>
+                        <div class="content-description">
+                            <div class="left-content-description">
+                                <p class="name-watch"><a href="" class="name-link">Air-Max-270</a></p>
+                                <p><a href="" class="watch-price">$60.00</a></p>
+                                <div class="rating-star">
+                                    <div class="star-icon">
+                                        <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                                    </div>
+                                    <span>(64)</span>
+                                </div>
+                                <button class="edit-button">
+                                    Edit Product
+                                </button>
+                            </div>
+                            <div class="right-description">
+                                <img src="./images/wishlist2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item1">
+                        <div class="item-image">
+                            <img src="./images/clock.png" alt="">
+                        </div>
+                        <div class="content-description">
+                            <div class="left-content-description">
+                                <p class="name-watch"><a href="" class="name-link">Minimal Chair Tool</a></p>
+                                <p><a href="" class="watch-price">$24.59</a></p>
+                                <div class="rating-star">
+                                    <div class="star-icon">
+                                        <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                                    </div>
+                                    <span>(63)</span>
+                                </div>
+                                <button class="edit-button">
+                                    Edit Product
+                                </button>
+                            </div>
+                            <div class="right-description">
+                                <img src="./images/wishlist2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item1">
+                        <div class="item-image">
+                            <img src="./images/clock.png" alt="">
+                        </div>
+                        <div class="content-description">
+                            <div class="left-content-description">
+                                <p class="name-watch"><a href="" class="name-link">Modern Wooden Sofa</a></p>
+                                <p><a href="" class="watch-price">$15.89</a></p>
+                                <div class="rating-star">
+                                    <div class="star-icon">
+                                        <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                                    </div>
+                                    <span class="start-rating">(132)</span>
+                                </div>
+                                <button class="edit-button">
+                                    Edit Product
+                                </button>
+                            </div>
+                            <div class="right-description">
+                                <img src="./images/wishlist2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item1">
+                        <div class="item-image">
+                            <img src="./images/clock.png" alt="">
+                        </div>
+                        <div class="content-description">
+                            <div class="left-content-description">
+                                <p class="name-watch"><a href="" class="name-link">TMA-2 HD Wireless</a></p>
+                                <p><a href="" class="watch-price">$80.25</a></p>
+                                <div class="rating-star">
+                                    <div class="star-icon">
+                                        <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                                    </div>
+                                    <span>(132)</span>
+                                </div>
+                                <button class="edit-button">
+                                    Edit Product
+                                </button>
+                            </div>
+                            <div class="right-description">
+                                <img src="./images/wishlist2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item1">
+                        <div class="item-image">
+                            <img src="./images/clock.png" alt="">
+                        </div>
+                        <div class="content-description">
+                            <div class="left-content-description">
+                                <p class="name-watch"><a href="" class="name-link">Magic Mouse 2</a></p>
+                                <p><a href="" class="watch-price">$25.00</a></p>
+                                <div class="rating-star">
+                                    <div class="star-icon">
+                                        <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                                    </div>
+                                    <span>(132)</span>
+                                </div>
+                                <button class="edit-button">
+                                    Edit Product
+                                </button>
+                            </div>
+                            <div class="right-description">
+                                <img src="./images/wishlist2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
