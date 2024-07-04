@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard #3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        body {
+            max-width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            margin-left: 0px;
+            margin-top: 0px;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: width 0.5s;
+        }
+
+        .sidebar:hover {
+            width: 250px;
+        }
+
+        .logo-name {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            margin-top: 7px;
+            margin-bottom: 30px;
+            margin-left: 20px;
+
+        }
+
+        .first-part {
+            font-size: 25px;
+            color: #4880FF;
+
+            font-weight: bolder;
+        }
+
+        .second-part {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 7px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .menu-item:hover {
+            background-color: #afb4b8;
+            transform: translateX(10px);
+        }
+
+        .menu-item.active {
+            background-color: #4285f4;
+            color: white;
+        }
+
+        .menu-item i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 12px;
+            color: #888;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+
+
+
+
+
+
+
+        .heading {
+            margin-top: -5px;
+            margin-left: 27px;
+            font-size: 12px;
+            line-height: 16.37px;
+            color: #202224;
+
+        }
+
+        .right-container {
+            width: 1022px;
+            height: 850px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 40px;
+
+        }
+
+        .header-box {
+            width: 1022px;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .search-option {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            width: 800px;
+        }
+
+        .hamburger img {
+            width: 24px;
+            height: 25px;
+
+        }
+
+        #search {
+            width: 388px;
+            height: 38px;
+            padding: 10px;
+            border-radius: 50px;
+            background-color: #f5f6fa;
+        }
+
+        .profile-part {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: 20px;
+
+        }
+
+        .notification-bar img {
+            width: 29px;
+            height: 30px;
+        }
+
+        .country-option {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            gap: 15px;
+
+        }
+
+        .country-image img {
+            width: 34px;
+            height: 24px;
+        }
+
+        select {
+            background: transparent;
+            outline: none;
+            width: 70px;
+            height: 19px;
+            border: none;
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 20px;
+
+        }
+
+        .profile-image img {
+            width: 43px;
+            height: 42px;
+            border-radius: 60%;
+
+        }
+
+        .profile-name {
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        .admin-name {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 15px;
+            color: #404040;
+        }
+
+        .admin {
+            font-size: 12px;
+            line-height: 16.37px;
+            font-weight: 600;
+            color: #565656;
+        }
+
+        button {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+
+        }
+
+        button img {
+            width: 10px;
+            height: 6px;
+
+        }
+
+        .content {
+            width: 1042px;
+            height: 1000px;
+            background-color: rgb(238, 236, 236);
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            margin-left: -20px;
+            padding: 30px;
+        }
+
+        .content-heading {
+            font-size: 32px;
+            line-height: 43.65px;
+            letter-spacing: -0.11px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+            margin-top: -10px;
+
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        .content {
+            background-color: #f5f6fa;
+            padding: 20px;
+        }
+
+        .content-heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .slideshow-container {
+            background-color: #4285f4;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+            margin-bottom: 10px;
+
+        }
+
+        .slide {
+            display: none;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+        .slide.active {
+            display: block;
+            height: 210px;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+        .slide h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .cta-button {
+            background-color: #f2994a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 30px;
+            width: 109px;
+            height: 35px;
+            font-weight: bold;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .products-grid {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 420px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .product-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+
+
+
+        .price {
+            color: #4285f4;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .rating {
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        .review-count {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .edit-button {
+            background-color: #f0f0f0;
+            border: none;
+
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            width: 109px;
+            height: 35px;
+            font-weight: bold;
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .favorite-btn.active {
+            color: #ff3366;
+        }
+    </style>
+</head>
+
+<body>
+    <!--container class is added and in that left container and right container are added-->
+    <div class="container">
+        <div class="left-container">
+            <!-- class sidebar -->
+            <div class="sidebar">
+                <!-- logo name with first and second part-->
+                <div class="logo-name">
+                    <span class="first-part">Dash</span>
+                    <span class="second-part">Stack</span>
+                </div>
+                <!--menu item class , which includes one active menu class-->
+                <div class="menu-item"><i class="fas fa-tachometer-alt"></i> Dashboard</div>
+                <div class="menu-item active"><i class="fas fa-box"></i> Products</div>
+                <div class="menu-item"><i class="far fa-heart"></i> Favorites</div>
+                <div class="menu-item"><i class="far fa-envelope"></i> Inbox</div>
+                <div class="menu-item"><i class="fas fa-list"></i> Order Lists</div>
+                <div class="menu-item"><i class="fas fa-boxes"></i> Product Stock</div>
+
+                <div class="section-title">PAGES</div>
+                <div class="menu-item"><i class="fas fa-tag"></i> Pricing</div>
+                <div class="menu-item"><i class="far fa-calendar-alt"></i> Calendar</div>
+                <div class="menu-item"><i class="fas fa-tasks"></i> To-Do</div>
+                <div class="menu-item"><i class="fas fa-address-book"></i> Contact</div>
+                <div class="menu-item"><i class="fas fa-file-invoice"></i> Invoice</div>
+                <div class="menu-item"><i class="fas fa-layer-group"></i> UI Elements</div>
+                <div class="menu-item"><i class="fas fa-users"></i> Team</div>
+                <div class="menu-item"><i class="fas fa-table"></i> Table</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item"><i class="fas fa-sign-out-alt"></i> Logout</div>
+            </div>
+
+        </div>
+        <div class="right-container">
+            <!--header box for nav bar -->
+            <div class="header-box">
+                <div class="header-box">
+                    <div class="search-option">
+                        <div class="hamburger">
+                            <img src="assets/menu.png" alt="">
+                        </div>
+                        <div class="search">
+
+                            <form class="search-form">
+
+                                <input type="search" name="Search" id="search" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="profile-part">
+                        <div class="notification-bar">
+                            <img src="assets/notification.png" alt="">
+                        </div>
+                        <div class="country-option">
+                            <div class="country-image">
+                                <img src="assets/flag.png" alt="">
+                            </div>
+                            <div class="country-selection">
+                                <select name="country" id="country">
+                                    <option value="english">
+                                        English
+                                    </option>
+                                    <option value="hindi">
+                                        Hindi
+                                    </option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="assets/admin.png" alt="">
+                            </div>
+                            <div class="profile-name">
+                                <div class="admin-name">Moni Roy</div>
+                                <div class="admin">Admin</div>
+                            </div>
+                        </div>
+                        <button>
+                            <img src="assets/image.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <!--heading for the main content-->
+                <h1 class="content-heading">Products</h1>
+
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <p>September 12-22</p>
+
+
+                        <h1>Enjoy free home<br>delivery in this summer</h1>
+                        <p>Designer Dresses - Pick from trendy Designer Dress.</p>
+                        <button class="cta-button">Get Started</button>
+                    </div>
+                    <div class="slide">
+                        <p>Another Offer</p>
+                        <h1>50% off on selected items</h1>
+                        <p>Limited time offer. Don't miss out!</p>
+                        <button class="cta-button">Shop Now</button>
+                    </div>
+                    <a class="prev" href="#">&#10094;</a>
+                    <a class="next" href="#">&#10095;</a>
+                </div>
+
+                <!--product card with classes price , start , fav button , edit button-->
+                <div class="products-grid">
+                    <div class="product-card">
+
+                        <img src="assets/watch.png" alt="Apple Watch Series 4">
+                        <h3>Apple Watch Series 4</h3>
+                        <p class="price">$120.00</p>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(131)</span>
+                        </div>
+                        <button class="edit-button">Edit Product</button>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/watch.png" alt="Apple Watch Series 4">
+                        <h3>Apple Watch Series 4</h3>
+                        <p class="price">$120.00</p>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(131)</span>
+                        </div>
+                        <button class="edit-button">Edit Product</button>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/watch.png" alt="Apple Watch Series 4">
+                        <h3>Apple Watch Series 4</h3>
+                        <p class="price">$120.00</p>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(131)</span>
+                        </div>
+                        <button class="edit-button">Edit Product</button>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    document.querySelector('.menu-item.active').classList.remove('active');
+                    this.classList.add('active');
+                });
+            });
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+            // Auto-advance slides every 5 seconds
+            setInterval(() => showSlide(currentSlide + 1), 5000);
+
+            // JavaScript for like button functionality
+            const favoriteBtns = document.querySelectorAll('.favorite-btn');
+
+            favoriteBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    this.textContent = this.classList.contains('active') ? '♥' : '♡';
+                });
+            });
+        </script>
+
+</body>
+
+</html>
